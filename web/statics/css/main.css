@@ -1,0 +1,36 @@
+
+#dv {
+    border: 1px red solid;
+    width: 600px;
+    margin: 0px auto;
+}
+
+form {
+    margin: 0px;
+}
+
+h2 {
+    font-family: 楷体;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+td {
+    text-align: center;
+}
+
+.tou {
+    background-color: lightskyblue;
+}
+
+table {
+    margin: 0px auto;
+}
+
+#a{
+    float: right;
+    color: red;
+}

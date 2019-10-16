@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.t87.InvitationManage.dao.InvitationMapper">
+
+    <!--查询记录数-->
+    <select id="count" resultType="int">
+         select count(1) from invitation
+    </select>
+
+
+    <!--查看所有的发帖信息-->
+    <select id="getInvitations" resultType="Invitation">
+         select*from invitation
+         order by createdate desc
+         limit #{currentPage},#{pageSize}
+
+    </select>
+
+    <!--删除该条发帖-->
+    <delete id="deleteInvitation">
+        delete from invitation
+        where id=#{id}
+    </delete>
+
+</mapper>

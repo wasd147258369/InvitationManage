@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.t87.InvitationManage.dao.ReplyDetailMapper">
+
+    <!--查看回复-->
+    <select id="getReplyDetails" parameterType="Integer" resultType="ReplyDetail">
+         select*from reply_detail
+         where invId=#{id}
+    </select>
+
+    <!--添加回复-->
+    <insert id="saveReply" parameterType="ReplyDetail">
+         insert into reply_detail(invId,content,author,createdate)
+         values(#{invId},#{content},#{author},#{createdate})
+    </insert>
+
+    <!--删除回复-->
+    <delete id="deleteReplyDetail">
+        delete from reply_detail
+        where invId=#{id}
+    </delete>
+
+</mapper>
